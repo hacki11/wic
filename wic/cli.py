@@ -7,7 +7,7 @@ from wic.options import options
 from wic.workspace import ws
 
 
-@click.group(help="Command line interface for winIDEA")
+@click.group(help="Command line interface for winIDEA v0.1")
 @click.option("--workspace", "-ws", type=click.File('r', lazy=True), help="Path to winIDEA workspace")
 @click.version_option(ic.getModuleVersion(), prog_name="WinIDEA SDK")
 @click.help_option('-h', '--help')
