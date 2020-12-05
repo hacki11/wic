@@ -9,6 +9,8 @@ https://www.isystem.com/downloads/isystem-connect-sdk.html
 `pip install wic`
 
 # Usage
+`ws [-ws <workspace-path] COMMAND [ARGS]`
+
 
 ### Manage download files
 Add ELF without loading code  
