@@ -83,7 +83,7 @@ $ wic -id <custom-ID> files list
 
 List all winIDEA instances  
 $ wic list
-
+```
 
 # Changelog
 ## v0.2

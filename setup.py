@@ -2,6 +2,8 @@ from setuptools import setup
 
 with open('README.md') as readme_file:
     README = readme_file.read()
+    long_description = readme_file.read()
+
 
 setup(
     name='wic',
