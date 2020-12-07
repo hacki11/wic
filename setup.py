@@ -6,9 +6,9 @@ with open('README.md') as readme_file:
 setup(
     name='wic',
     packages=['wic'],
-    version='0.1',
+    version='0.2',
     license='apache-2.0',
-    description='WinIDEA command line interface',
+    description='winIDEA command line interface',
     author='Juergen Schmid',
     author_email='jur.schmid@gmail.com',
     url='https://github.com/hacki11/wic',

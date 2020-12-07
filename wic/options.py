@@ -8,6 +8,7 @@ def options(ctx):
     global cmgr
     global ideCtrl
     cmgr = ctx.obj.cmgr
+    ctx.obj.connect()
     ideCtrl = ic.CIDEController(cmgr)
     pass
 

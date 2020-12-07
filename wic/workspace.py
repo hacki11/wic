@@ -6,6 +6,7 @@ import isystem.connect as ic
 @click.pass_context
 def ws(ctx):
     global wsCtrl
+    ctx.obj.connect()
     wsCtrl = ic.CWorkspaceController(ctx.obj.cmgr)
     pass
 
