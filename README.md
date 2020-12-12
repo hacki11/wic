@@ -1,3 +1,4 @@
+[![PyPi Version Alt](https://badge.fury.io/py/wic.svg)](https://pypi.python.org/pypi/wic/)
 # wic
 winIDEA Command Line Interface
 
