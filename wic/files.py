@@ -11,6 +11,7 @@ def files(ctx):
     global loadCtrl
     global ideCtrl
     cmgr = ctx.obj.cmgr
+    ctx.obj.connect()
     loadCtrl = ic.CLoaderController(cmgr)
     ideCtrl = ic.CIDEController(cmgr)
     pass
@@ -20,7 +21,8 @@ def files(ctx):
 @click.option("--file", "-f", type=click.File('r', lazy=True), help="Path to download file")
 @click.option("--code/--no-code", "-c/-nc", default=True, help="Load code")
 @click.option("--symbols/--no-symbols", "-s/-ns", default=True, help="Load symbols")
-def add(file, code, symbols):
+@click.option("-rel/-abs", default=True, help="Use absolute or relative path (-rel is default)")
+def add(file, code, symbols, rel):
     click.echo(f"Add '{file.name}'")
 
     new_index = count_files()
@@ -29,6 +31,7 @@ def add(file, code, symbols):
     download_config \
         .setCodeOffset(0) \
         .setSymbolsOffset(0) \
+        .setUseAbsolutePath(not rel) \
         .setDownloadFileFormat(detect_type(file.name))
 
     loadCtrl.addToDownloadList(download_config, ic.CLoaderController.DLIST_PRIMARY, file.name, '')
